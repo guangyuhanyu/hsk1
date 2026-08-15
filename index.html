@@ -439,9 +439,10 @@ const ICONS = {
 
 /* ===================== DATA ===================== */
 const CATEGORIES = [
-  { id:'luyentap', label:'1. Luyện Tập',        icon:ICONS.pencil },
-  { id:'filenghe', label:'2. File Nghe',        icon:ICONS.headphones },
-  { id:'ontap',    label:'3. Ôn Tập Tổng Hợp',  icon:ICONS.book },
+  { id:'nguam',    label:'1. Ngữ Âm',           icon:ICONS.wave, external:true, href:'luyen-doc-pinyin-rut-tham-cam.html' },
+  { id:'luyentap', label:'2. Luyện Tập',        icon:ICONS.pencil },
+  { id:'filenghe', label:'3. File Nghe',        icon:ICONS.headphones },
+  { id:'ontap',    label:'4. Ôn Tập Tổng Hợp',  icon:ICONS.book },
 ];
 
 const LEVELS = ['Tất cả','HSK1','HSK2','HSK3','HSK4','HSK5','HSK6'];
@@ -579,9 +580,13 @@ function renderSidebar(){
     btn.innerHTML = `
       <span class="cat-icon">${cat.icon}</span>
       <span>${cat.label}</span>
-      <span class="cat-count">${countFor(cat.id)}</span>
+      <span class="cat-count">${cat.external ? '→' : countFor(cat.id)}</span>
     `;
     btn.addEventListener('click', ()=>{
+      if(cat.external){
+        window.location.href = cat.href;
+        return;
+      }
       state.category = cat.id;
       state.view = 'list';
       renderAll();
