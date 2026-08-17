@@ -186,7 +186,8 @@
     margin:0 0 14px;
     display:flex; align-items:center; gap:10px;
   }
-  .list-title .cat-icon{width:30px;height:30px;}
+  .list-title .cat-icon{width:30px;height:30px; border-radius:10px;}
+  .list-title .cat-icon svg{width:16px;height:16px;}
 
   /* Mobile: app-style navigation. Only one pane (menu OR list) visible at a time. */
   @media (max-width:760px){
@@ -218,12 +219,14 @@
   .cat-btn:hover{border-color:var(--c3);}
   .cat-btn.active{background:var(--dark-pill); color:#fff; border-color:var(--dark-pill);}
   .cat-icon{
-    width:34px; height:34px; flex:none; border-radius:10px;
+    width:34px; height:34px; flex:none; border-radius:11px;
     display:flex; align-items:center; justify-content:center;
-    background:var(--cream);
-    color:var(--c4);
+    background:var(--c4);
+    color:#fff;
+    box-shadow:0 3px 8px rgba(0,0,0,0.14);
   }
-  .cat-btn.active .cat-icon{background:rgba(255,255,255,0.15); color:#fff;}
+  .cat-icon svg{width:18px;height:18px;}
+  .cat-btn.active .cat-icon{background:rgba(255,255,255,0.22) !important; box-shadow:none;}
   .cat-count{
     margin-left:auto; font-size:11.5px; font-weight:700;
     color:var(--gray); background:var(--cream);
@@ -428,21 +431,20 @@
 <script>
 /* ===================== ICONS (original simple line-art, inspired by traditional Chinese motifs) ===================== */
 const ICONS = {
-  cloud: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 32c-4.4 0-8-3.4-8-7.6 0-4.2 3.6-7.6 8-7.6.3 0 .6 0 .9.1C15 12.2 19.6 8 25.2 8c6 0 11 4.4 11.8 10.1 4.6.4 8.2 4.1 8.2 8.7 0 4.8-4 8.7-9 8.7H13z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M17 25c1.5 1.6 4.2 1.6 5.7 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
+  wave: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10v4h3.6l4.6 4.4V5.6L6.6 10H3z" fill="#fff"/><path d="M14.8 8.4a5.2 5.2 0 010 7.2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M17.3 5.8a9 9 0 010 12.4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".65"/></svg>`,
   lotus: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 26c0-9 4-15 10-18-2 8-2 14 0 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 26c0-9-4-15-10-18 2 8 2 14 0 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 26V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M12 30c4 5 8 6 12 6s8-1 12-6c-6 3-18 3-24 0z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 34c5 6 19 6 28 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>`,
   mountain: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 34l8-14 6 8 5-11 9 13 6-6 6 10H4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M4 34h40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
-  wave: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20c4-4 8 4 12 0s8-4 12 0 8 4 12 0 4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M4 30c4-4 8 4 12 0s8-4 12 0 8 4 12 0 4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
-  book: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10c0-1.1.9-2 2-2h12c2.2 0 4 1.8 4 4v26c0-2.2-1.8-4-4-4H6V10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M42 10c0-1.1-.9-2-2-2H28c-2.2 0-4 1.8-4 4v26c0-2.2 1.8-4 4-4h14V10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>`,
-  pencil: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 40l2-9 22-22 7 7-22 22-9 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M28 11l7 7" stroke="currentColor" stroke-width="2"/></svg>`,
-  headphones: `<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 28v-4a16 16 0 0132 0v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="4" y="26" width="8" height="12" rx="3" stroke="currentColor" stroke-width="2"/><rect x="36" y="26" width="8" height="12" rx="3" stroke="currentColor" stroke-width="2"/></svg>`
+  pencil: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 20l1.1-4.6L15.6 4.9a1.7 1.7 0 012.4 0l1.1 1.1a1.7 1.7 0 010 2.4L8.6 18.9 4 20z" fill="#fff"/><path d="M14.2 6.5l3.3 3.3" stroke="#B8874A" stroke-width="1.3" opacity=".55" stroke-linecap="round"/></svg>`,
+  headphones: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 13.5v-1.2a7.5 7.5 0 0115 0v1.2" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><rect x="3" y="12.7" width="4.6" height="6.6" rx="2.1" fill="#fff"/><rect x="16.4" y="12.7" width="4.6" height="6.6" rx="2.1" fill="#fff"/></svg>`,
+  book: `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 6.8c-1.8-1.5-4.3-2.2-7.3-2.2v12.9c3 0 5.5.7 7.3 2.2 1.8-1.5 4.3-2.2 7.3-2.2V4.6c-3 0-5.5.7-7.3 2.2z" fill="#fff"/><path d="M12 6.8v12.9" stroke="#B8874A" stroke-width="1.2" opacity=".4"/></svg>`
 };
 
 /* ===================== DATA ===================== */
 const CATEGORIES = [
-  { id:'nguam',    label:'1. Ngữ Âm',           icon:ICONS.wave, external:true, href:'luyen-doc-pinyin-rut-tham-cam.html' },
-  { id:'luyentap', label:'2. Luyện Tập',        icon:ICONS.pencil },
-  { id:'filenghe', label:'3. File Nghe',        icon:ICONS.headphones },
-  { id:'ontap',    label:'4. Ôn Tập Tổng Hợp',  icon:ICONS.book },
+  { id:'nguam',    label:'1. Ngữ Âm',           icon:ICONS.wave,       accent:'#4F8C89', external:true, href:'luyen-doc-pinyin-rut-tham-cam.html' },
+  { id:'luyentap', label:'2. Luyện Tập',        icon:ICONS.pencil,     accent:'#C23B2E' },
+  { id:'filenghe', label:'3. File Nghe',        icon:ICONS.headphones, accent:'#C2695F' },
+  { id:'ontap',    label:'4. Ôn Tập Tổng Hợp',  icon:ICONS.book,       accent:'#B8874A' },
 ];
 
 const LEVELS = ['Tất cả','HSK1','HSK2','HSK3','HSK4','HSK5','HSK6'];
@@ -581,7 +583,7 @@ function renderSidebar(){
     btn.type = 'button';
     btn.className = 'cat-btn' + (state.category===cat.id ? ' active' : '');
     btn.innerHTML = `
-      <span class="cat-icon">${cat.icon}</span>
+      <span class="cat-icon" style="background:${cat.accent}">${cat.icon}</span>
       <span>${cat.label}</span>
       <span class="cat-count">${cat.external ? '→' : countFor(cat.id)}</span>
     `;
@@ -603,7 +605,7 @@ const listTitleEl = document.getElementById('listTitle');
 const backBtn = document.getElementById('backBtn');
 function renderListTitle(){
   const cat = CATEGORIES.find(c=>c.id===state.category);
-  listTitleEl.innerHTML = cat ? `<span class="cat-icon">${cat.icon}</span><span>${cat.label}</span>` : '';
+  listTitleEl.innerHTML = cat ? `<span class="cat-icon" style="background:${cat.accent}">${cat.icon}</span><span>${cat.label}</span>` : '';
 }
 backBtn.addEventListener('click', ()=>{
   state.view = 'menu';
