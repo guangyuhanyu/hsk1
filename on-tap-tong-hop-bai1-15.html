@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ôn tập tổng hợp — Bài 1–5</title>
+<title>Ôn tập tổng hợp — Bài 1–15</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
@@ -332,8 +332,8 @@
         <span>Tiếng Trung cùng Guangyu Laoshi</span>
       </div>
       <div class="eyebrow">Giáo trình New HSK 1 · Ôn tập tổng hợp</div>
-      <h1>Ôn tập Bài 1 – Bài 5</h1>
-      <p class="subtitle">Chọn một mục để bắt đầu ôn tập: toàn bộ từ vựng và điểm ngữ pháp trọng tâm từ Bài 1 đến Bài 5, kèm chức năng rút ngẫu nhiên để kiểm tra nhanh.</p>
+      <h1>Ôn tập Bài 1 – Bài 15</h1>
+      <p class="subtitle">Chọn một mục để bắt đầu ôn tập: toàn bộ từ vựng và điểm ngữ pháp trọng tâm từ Bài 1 đến Bài 15 (toàn bộ HSK1), kèm chức năng rút ngẫu nhiên để kiểm tra nhanh.</p>
     </header>
 
     <div class="select-grid">
@@ -360,7 +360,7 @@
       <button class="back-btn" data-back="home">← Quay lại trang trước</button>
     </div>
     <div class="sub-header">
-      <h2>🀄 Ôn từ vựng Bài 1 – 5</h2>
+      <h2>🀄 Ôn từ vựng Bài 1 – 15</h2>
       <p>Toàn bộ từ vựng đã học, có thể tìm kiếm hoặc lọc theo bài. Bấm nút bên dưới để rút ngẫu nhiên 5 từ ôn nhanh.</p>
     </div>
 
@@ -385,7 +385,7 @@
       <button class="back-btn" data-back="home">← Quay lại trang trước</button>
     </div>
     <div class="sub-header">
-      <h2>📖 Ôn ngữ pháp Bài 1 – 5</h2>
+      <h2>📖 Ôn ngữ pháp Bài 1 – 15</h2>
       <p>Các điểm ngữ pháp trọng tâm kèm ví dụ minh hoạ. Bấm nút bên dưới để rút ngẫu nhiên 3 điểm ôn nhanh.</p>
     </div>
 
@@ -407,9 +407,8 @@
 </div>
 
 <script>
-/* ===================== DATA: VOCAB (Bài 1–5, New HSK 1) ===================== */
+/* ===================== DATA: VOCAB (Bài 1–15, toàn bộ New HSK 1) ===================== */
 const WORDS = [
-  // Bài 1
   {id:1, bai:1, hanzi:"你好", pinyin:"nǐ hǎo", loai:"đgt.", nghia:"xin chào, chào bạn"},
   {id:2, bai:1, hanzi:"大家", pinyin:"dàjiā", loai:"đt.", nghia:"mọi người"},
   {id:3, bai:1, hanzi:"好", pinyin:"hǎo", loai:"tt.", nghia:"tốt, khoẻ"},
@@ -422,7 +421,6 @@ const WORDS = [
   {id:10, bai:1, hanzi:"不客气", pinyin:"bú kèqi", loai:"cụm từ", nghia:"đừng khách sáo, không cần khách khí"},
   {id:11, bai:1, hanzi:"同学", pinyin:"tóngxué", loai:"dt.", nghia:"bạn học"},
   {id:12, bai:1, hanzi:"再见", pinyin:"zàijiàn", loai:"đgt.", nghia:"tạm biệt"},
-  // Bài 2
   {id:13, bai:2, hanzi:"请问", pinyin:"qǐngwèn", loai:"đgt.", nghia:"xin hỏi"},
   {id:14, bai:2, hanzi:"你", pinyin:"nǐ", loai:"đt.", nghia:"bạn, anh, chị, em (đại từ ngôi 2 số ít)"},
   {id:15, bai:2, hanzi:"叫", pinyin:"jiào", loai:"đgt.", nghia:"gọi là, tên là"},
@@ -438,7 +436,6 @@ const WORDS = [
   {id:25, bai:2, hanzi:"高兴", pinyin:"gāoxìng", loai:"tt.", nghia:"vui, vui vẻ"},
   {id:26, bai:2, hanzi:"认识", pinyin:"rènshi", loai:"đgt.", nghia:"quen, làm quen"},
   {id:27, bai:2, hanzi:"也", pinyin:"yě", loai:"phó.", nghia:"cũng"},
-  // Bài 3
   {id:28, bai:3, hanzi:"人", pinyin:"rén", loai:"dt.", nghia:"người"},
   {id:29, bai:3, hanzi:"的", pinyin:"de", loai:"trợ.", nghia:"của (trợ từ kết cấu, dùng sau định ngữ)"},
   {id:30, bai:3, hanzi:"中国", pinyin:"Zhōngguó", loai:"d.từ riêng", nghia:"Trung Quốc"},
@@ -461,7 +458,6 @@ const WORDS = [
   {id:47, bai:3, hanzi:"太", pinyin:"tài", loai:"phó.", nghia:"quá, lắm"},
   {id:48, bai:3, hanzi:"我们", pinyin:"wǒmen", loai:"đt.", nghia:"chúng tôi, chúng ta"},
   {id:49, bai:3, hanzi:"想", pinyin:"xiǎng", loai:"đgt.", nghia:"nhớ"},
-  // Bài 4
   {id:50, bai:4, hanzi:"有", pinyin:"yǒu", loai:"đgt.", nghia:"có"},
   {id:51, bai:4, hanzi:"多少", pinyin:"duōshao", loai:"đt.", nghia:"bao nhiêu"},
   {id:52, bai:4, hanzi:"个", pinyin:"gè", loai:"lượng.", nghia:"lượng từ dùng chung cho nhiều danh từ"},
@@ -483,7 +479,6 @@ const WORDS = [
   {id:68, bai:4, hanzi:"今年", pinyin:"jīnnián", loai:"dt.", nghia:"năm nay"},
   {id:69, bai:4, hanzi:"多", pinyin:"duō", loai:"phó.", nghia:"bao nhiêu (hỏi mức độ, dùng trước tính từ)"},
   {id:70, bai:4, hanzi:"大", pinyin:"dà", loai:"tt.", nghia:"lớn (dùng hỏi tuổi tác: 多大)"},
-  // Bài 5
   {id:71, bai:5, hanzi:"今天", pinyin:"jīntiān", loai:"dt.", nghia:"hôm nay"},
   {id:72, bai:5, hanzi:"号", pinyin:"hào", loai:"lượng.", nghia:"ngày, mùng"},
   {id:73, bai:5, hanzi:"月", pinyin:"yuè", loai:"dt.", nghia:"tháng"},
@@ -506,9 +501,249 @@ const WORDS = [
   {id:90, bai:5, hanzi:"好看", pinyin:"hǎokàn", loai:"tt.", nghia:"đẹp"},
   {id:91, bai:5, hanzi:"喜欢", pinyin:"xǐhuan", loai:"đgt.", nghia:"thích"},
   {id:92, bai:5, hanzi:"它", pinyin:"tā", loai:"đt.", nghia:"nó"},
+  {id:93, bai:6, hanzi:"手机", pinyin:"shǒujī", loai:"dt.", nghia:"điện thoại di động"},
+  {id:94, bai:6, hanzi:"电话", pinyin:"diànhuà", loai:"dt.", nghia:"điện thoại (máy cố định)"},
+  {id:95, bai:6, hanzi:"号", pinyin:"hào", loai:"dt.", nghia:"số"},
+  {id:96, bai:6, hanzi:"明天", pinyin:"míngtiān", loai:"dt.", nghia:"ngày mai"},
+  {id:97, bai:6, hanzi:"去", pinyin:"qù", loai:"đgt.", nghia:"đi"},
+  {id:98, bai:6, hanzi:"哪儿", pinyin:"nǎr", loai:"đt.", nghia:"đâu, chỗ nào, nơi nào"},
+  {id:99, bai:6, hanzi:"想", pinyin:"xiǎng", loai:"đtnn.", nghia:"muốn"},
+  {id:100, bai:6, hanzi:"超市", pinyin:"chāoshì", loai:"dt.", nghia:"siêu thị"},
+  {id:101, bai:6, hanzi:"买", pinyin:"mǎi", loai:"đgt.", nghia:"mua"},
+  {id:102, bai:6, hanzi:"东西", pinyin:"dōngxi", loai:"dt.", nghia:"đồ, đồ đạc"},
+  {id:103, bai:6, hanzi:"些", pinyin:"xiē", loai:"lượng.", nghia:"một ít, một vài"},
+  {id:104, bai:6, hanzi:"牛奶", pinyin:"niúnǎi", loai:"dt.", nghia:"sữa (bò)"},
+  {id:105, bai:6, hanzi:"吃", pinyin:"chī", loai:"đgt.", nghia:"ăn"},
+  {id:106, bai:6, hanzi:"晚饭", pinyin:"wǎnfàn", loai:"dt.", nghia:"bữa tối"},
+  {id:107, bai:6, hanzi:"那边", pinyin:"nàbiān", loai:"đt.", nghia:"bên kia, chỗ đó"},
+  {id:108, bai:6, hanzi:"包子", pinyin:"bāozi", loai:"dt.", nghia:"bánh bao (có nhân)"},
+  {id:109, bai:6, hanzi:"非常", pinyin:"fēicháng", loai:"phó.", nghia:"rất, vô cùng, cực kỳ"},
+  {id:110, bai:6, hanzi:"好吃", pinyin:"hǎochī", loai:"tt.", nghia:"ngon"},
+  {id:111, bai:6, hanzi:"米饭", pinyin:"mǐfàn", loai:"dt.", nghia:"cơm (cơm trắng)"},
+  {id:112, bai:6, hanzi:"怎么", pinyin:"zěnme", loai:"đt.", nghia:"thế nào, bằng cách nào"},
+  {id:113, bai:6, hanzi:"坐", pinyin:"zuò", loai:"đgt.", nghia:"ngồi, đi (xe, tàu...)"},
+  {id:114, bai:6, hanzi:"出租车", pinyin:"chūzūchē", loai:"dt.", nghia:"xe taxi"},
+  {id:115, bai:6, hanzi:"西安饭店", pinyin:"Xī'ān Fàndiàn", loai:"d.từ riêng", nghia:"nhà hàng Tây An"},
+  {id:116, bai:7, hanzi:"现在", pinyin:"xiànzài", loai:"dt.", nghia:"bây giờ, hiện tại"},
+  {id:117, bai:7, hanzi:"点", pinyin:"diǎn", loai:"lượng.", nghia:"giờ"},
+  {id:118, bai:7, hanzi:"早上", pinyin:"zǎoshang", loai:"dt.", nghia:"buổi sáng, sáng sớm"},
+  {id:119, bai:7, hanzi:"上午", pinyin:"shàngwǔ", loai:"dt.", nghia:"buổi sáng"},
+  {id:120, bai:7, hanzi:"分", pinyin:"fēn", loai:"lượng.", nghia:"phút"},
+  {id:121, bai:7, hanzi:"课", pinyin:"kè", loai:"dt.", nghia:"tiết học, giờ học"},
+  {id:122, bai:7, hanzi:"下午", pinyin:"xiàwǔ", loai:"dt.", nghia:"buổi chiều"},
+  {id:123, bai:7, hanzi:"见", pinyin:"jiàn", loai:"đgt.", nghia:"gặp, gặp mặt"},
+  {id:124, bai:7, hanzi:"吧", pinyin:"ba", loai:"trợ.", nghia:"nhé (cuối câu, đưa ra đề nghị, gợi ý, thương lượng)"},
+  {id:125, bai:7, hanzi:"电影院", pinyin:"diànyǐngyuàn", loai:"dt.", nghia:"rạp chiếu phim"},
+  {id:126, bai:7, hanzi:"看", pinyin:"kàn", loai:"đgt.", nghia:"xem, nhìn, đọc"},
+  {id:127, bai:7, hanzi:"电影", pinyin:"diànyǐng", loai:"dt.", nghia:"phim, điện ảnh"},
+  {id:128, bai:7, hanzi:"事", pinyin:"shì", loai:"dt.", nghia:"việc, sự việc"},
+  {id:129, bai:7, hanzi:"上课", pinyin:"shàngkè", loai:"đgt.", nghia:"lên lớp, đi học"},
+  {id:130, bai:7, hanzi:"呢", pinyin:"ne", loai:"trợ.", nghia:"đặt cuối câu, nhấn mạnh/duy trì ngữ khí trần thuật hoặc câu hỏi"},
+  {id:131, bai:7, hanzi:"半", pinyin:"bàn", loai:"số.", nghia:"một nửa, rưỡi"},
+  {id:132, bai:7, hanzi:"下课", pinyin:"xiàkè", loai:"đgt.", nghia:"tan học"},
+  {id:133, bai:7, hanzi:"在", pinyin:"zài", loai:"đgt.", nghia:"ở, tại"},
+  {id:134, bai:7, hanzi:"家", pinyin:"jiā", loai:"dt.", nghia:"nhà"},
+  {id:135, bai:7, hanzi:"里", pinyin:"li / lǐ", loai:"đt.", nghia:"trong, bên trong"},
+  {id:136, bai:7, hanzi:"晚上", pinyin:"wǎnshang", loai:"dt.", nghia:"buổi tối"},
+  {id:137, bai:7, hanzi:"医院", pinyin:"yīyuàn", loai:"dt.", nghia:"bệnh viện"},
+  {id:138, bai:7, hanzi:"上班", pinyin:"shàngbān", loai:"đgt.", nghia:"đi làm, vào ca"},
+  {id:139, bai:7, hanzi:"店", pinyin:"diàn", loai:"dt.", nghia:"cửa hàng, cửa tiệm"},
+  {id:140, bai:7, hanzi:"菜", pinyin:"cài", loai:"dt.", nghia:"thức ăn, món ăn, rau"},
+  {id:141, bai:7, hanzi:"分钟", pinyin:"fēnzhōng", loai:"lượng.", nghia:"phút"},
+  {id:142, bai:7, hanzi:"后", pinyin:"hòu", loai:"đt.", nghia:"sau, sau đó"},
+  {id:143, bai:8, hanzi:"房间", pinyin:"fángjiān", loai:"dt.", nghia:"căn phòng"},
+  {id:144, bai:8, hanzi:"外", pinyin:"wài", loai:"dt.", nghia:"ngoài, bên ngoài"},
+  {id:145, bai:8, hanzi:"只", pinyin:"zhī", loai:"lượng.", nghia:"con (chim, chó, hổ...)"},
+  {id:146, bai:8, hanzi:"小", pinyin:"xiǎo", loai:"tt.", nghia:"nhỏ, bé"},
+  {id:147, bai:8, hanzi:"猫", pinyin:"māo", loai:"dt.", nghia:"mèo"},
+  {id:148, bai:8, hanzi:"没", pinyin:"méi", loai:"phó.", nghia:"không, chưa"},
+  {id:149, bai:8, hanzi:"看见", pinyin:"kànjiàn", loai:"đgt.", nghia:"nhìn thấy, trông thấy"},
+  {id:150, bai:8, hanzi:"桌子", pinyin:"zhuōzi", loai:"dt.", nghia:"bàn, cái bàn"},
+  {id:151, bai:8, hanzi:"下", pinyin:"xià", loai:"dt.", nghia:"dưới, bên dưới"},
+  {id:152, bai:8, hanzi:"漂亮", pinyin:"piàoliang", loai:"tt.", nghia:"đẹp, xinh đẹp"},
+  {id:153, bai:8, hanzi:"在", pinyin:"zài", loai:"giới.", nghia:"ở, tại (giới từ)"},
+  {id:154, bai:8, hanzi:"学校", pinyin:"xuéxiào", loai:"dt.", nghia:"trường học"},
+  {id:155, bai:8, hanzi:"书店", pinyin:"shūdiàn", loai:"dt.", nghia:"hiệu sách, nhà sách"},
+  {id:156, bai:8, hanzi:"前", pinyin:"qián", loai:"dt.", nghia:"phía trước"},
+  {id:157, bai:8, hanzi:"能", pinyin:"néng", loai:"đtnn.", nghia:"có thể"},
+  {id:158, bai:8, hanzi:"到", pinyin:"dào", loai:"đgt.", nghia:"đến"},
+  {id:159, bai:8, hanzi:"午饭", pinyin:"wǔfàn", loai:"dt.", nghia:"bữa trưa"},
+  {id:160, bai:8, hanzi:"饭", pinyin:"fàn", loai:"dt.", nghia:"cơm"},
+  {id:161, bai:8, hanzi:"大", pinyin:"dà", loai:"tt.", nghia:"lớn, to"},
+  {id:162, bai:8, hanzi:"病人", pinyin:"bìngrén", loai:"dt.", nghia:"bệnh nhân"},
+  {id:163, bai:8, hanzi:"多", pinyin:"duō", loai:"tt.", nghia:"nhiều"},
+  {id:164, bai:8, hanzi:"医生", pinyin:"yīshēng", loai:"dt.", nghia:"bác sĩ"},
+  {id:165, bai:8, hanzi:"工作", pinyin:"gōngzuò", loai:"đgt.", nghia:"làm việc"},
+  {id:166, bai:8, hanzi:"胡医生", pinyin:"Hú yīshēng", loai:"d.từ riêng", nghia:"bác sĩ Hồ"},
+  {id:167, bai:9, hanzi:"前边", pinyin:"qiánbian", loai:"dt.", nghia:"phía trước"},
+  {id:168, bai:9, hanzi:"边", pinyin:"bian / biān", loai:"h.tố/dt.", nghia:"phía, bên"},
+  {id:169, bai:9, hanzi:"家", pinyin:"jiā", loai:"lượng.", nghia:"cái, chiếc (dùng cho cửa hàng, cơ quan, doanh nghiệp)"},
+  {id:170, bai:9, hanzi:"那个", pinyin:"nàge", loai:"đt.", nghia:"đó, cái đó"},
+  {id:171, bai:9, hanzi:"外边", pinyin:"wàibian", loai:"dt.", nghia:"phía ngoài, bên ngoài"},
+  {id:172, bai:9, hanzi:"椅子", pinyin:"yǐzi", loai:"dt.", nghia:"ghế"},
+  {id:173, bai:9, hanzi:"上", pinyin:"shang / shàng", loai:"đt.", nghia:"trên, trước (dùng sau danh từ, chỉ vị trí)"},
+  {id:174, bai:9, hanzi:"本", pinyin:"běn", loai:"lượng.", nghia:"quyển, cuốn"},
+  {id:175, bai:9, hanzi:"书", pinyin:"shū", loai:"dt.", nghia:"sách"},
+  {id:176, bai:9, hanzi:"那", pinyin:"nà", loai:"đt.", nghia:"kia, đó"},
+  {id:177, bai:9, hanzi:"第", pinyin:"dì", loai:"t.tố", nghia:"thứ (dùng biểu thị số thứ tự)"},
+  {id:178, bai:9, hanzi:"学习", pinyin:"xuéxí", loai:"đgt.", nghia:"học, học tập"},
+  {id:179, bai:9, hanzi:"做", pinyin:"zuò", loai:"đgt.", nghia:"làm"},
+  {id:180, bai:9, hanzi:"白天", pinyin:"báitiān", loai:"dt.", nghia:"ban ngày"},
+  {id:181, bai:9, hanzi:"读书", pinyin:"dúshū", loai:"đgt.", nghia:"đọc sách, xem sách"},
+  {id:182, bai:9, hanzi:"和", pinyin:"hé", loai:"giới.", nghia:"với, cùng"},
+  {id:183, bai:9, hanzi:"朋友", pinyin:"péngyou", loai:"dt.", nghia:"bạn, bạn bè"},
+  {id:184, bai:9, hanzi:"唱", pinyin:"chàng", loai:"đgt.", nghia:"hát"},
+  {id:185, bai:9, hanzi:"歌", pinyin:"gē", loai:"dt.", nghia:"bài hát"},
+  {id:186, bai:9, hanzi:"好听", pinyin:"hǎotīng", loai:"tt.", nghia:"hay, nghe hay"},
+  {id:187, bai:9, hanzi:"电视", pinyin:"diànshì", loai:"dt.", nghia:"ti vi, vô tuyến"},
+  {id:188, bai:9, hanzi:"狗", pinyin:"gǒu", loai:"dt.", nghia:"chó"},
+  {id:189, bai:9, hanzi:"玩", pinyin:"wán", loai:"đgt.", nghia:"chơi"},
+  {id:190, bai:10, hanzi:"杯子", pinyin:"bēizi", loai:"dt.", nghia:"cốc, ly"},
+  {id:191, bai:10, hanzi:"售货员", pinyin:"shòuhuòyuán", loai:"dt.", nghia:"nhân viên bán hàng"},
+  {id:192, bai:10, hanzi:"这边", pinyin:"zhèbiān", loai:"đt.", nghia:"bên này, phía này"},
+  {id:193, bai:10, hanzi:"钱", pinyin:"qián", loai:"dt.", nghia:"tiền"},
+  {id:194, bai:10, hanzi:"这些", pinyin:"zhèxiē", loai:"đt.", nghia:"những cái này"},
+  {id:195, bai:10, hanzi:"块", pinyin:"kuài", loai:"lượng.", nghia:"đồng (đơn vị tiền tệ, khẩu ngữ)"},
+  {id:196, bai:10, hanzi:"那些", pinyin:"nàxiē", loai:"đt.", nghia:"những cái kia"},
+  {id:197, bai:10, hanzi:"这儿", pinyin:"zhèr", loai:"đt.", nghia:"ở đây, chỗ này"},
+  {id:198, bai:10, hanzi:"水果", pinyin:"shuǐguǒ", loai:"dt.", nghia:"hoa quả, trái cây"},
+  {id:199, bai:10, hanzi:"少", pinyin:"shǎo", loai:"tt.", nghia:"ít"},
+  {id:200, bai:10, hanzi:"斤", pinyin:"jīn", loai:"lượng.", nghia:"cân (đơn vị đo lường TQ, 1 cân = 0,5kg)"},
+  {id:201, bai:10, hanzi:"苹果", pinyin:"píngguǒ", loai:"dt.", nghia:"táo"},
+  {id:202, bai:10, hanzi:"便宜", pinyin:"piányi", loai:"tt.", nghia:"rẻ"},
+  {id:203, bai:10, hanzi:"商店", pinyin:"shāngdiàn", loai:"dt.", nghia:"cửa hàng"},
+  {id:204, bai:10, hanzi:"衣服", pinyin:"yīfu", loai:"dt.", nghia:"quần áo"},
+  {id:205, bai:10, hanzi:"件", pinyin:"jiàn", loai:"lượng.", nghia:"chiếc, cái (dùng cho quần áo)"},
+  {id:206, bai:10, hanzi:"元", pinyin:"yuán", loai:"lượng.", nghia:"đồng (nhân dân tệ, văn viết)"},
+  {id:207, bai:10, hanzi:"怎么样", pinyin:"zěnmeyàng", loai:"đt.", nghia:"thế nào, như thế nào"},
+  {id:208, bai:10, hanzi:"贵", pinyin:"guì", loai:"tt.", nghia:"đắt"},
+  {id:209, bai:10, hanzi:"穿", pinyin:"chuān", loai:"đgt.", nghia:"mặc"},
+  {id:210, bai:10, hanzi:"女", pinyin:"nǚ", loai:"tt.", nghia:"nữ, con gái"},
+  {id:211, bai:10, hanzi:"男", pinyin:"nán", loai:"tt.", nghia:"nam, con trai"},
+  {id:212, bai:10, hanzi:"那儿", pinyin:"nàr", loai:"đt.", nghia:"ở kia, chỗ đó"},
+  {id:213, bai:11, hanzi:"时候", pinyin:"shíhou", loai:"dt.", nghia:"lúc, khi"},
+  {id:214, bai:11, hanzi:"饭店", pinyin:"fàndiàn", loai:"dt.", nghia:"nhà hàng, khách sạn"},
+  {id:215, bai:11, hanzi:"知道", pinyin:"zhīdào", loai:"đgt.", nghia:"biết, nhận ra"},
+  {id:216, bai:11, hanzi:"正在", pinyin:"zhèngzài", loai:"phó.", nghia:"đang (làm gì)"},
+  {id:217, bai:11, hanzi:"找", pinyin:"zhǎo", loai:"đgt.", nghia:"tìm, kiếm"},
+  {id:218, bai:11, hanzi:"开车", pinyin:"kāichē", loai:"đgt.", nghia:"lái xe (ô tô)"},
+  {id:219, bai:11, hanzi:"车", pinyin:"chē", loai:"dt.", nghia:"xe"},
+  {id:220, bai:11, hanzi:"在", pinyin:"zài", loai:"phó.", nghia:"đang"},
+  {id:221, bai:11, hanzi:"读", pinyin:"dú", loai:"đgt.", nghia:"học, đọc"},
+  {id:222, bai:11, hanzi:"大学", pinyin:"dàxué", loai:"dt.", nghia:"đại học"},
+  {id:223, bai:11, hanzi:"大学生", pinyin:"dàxuéshēng", loai:"dt.", nghia:"sinh viên"},
+  {id:224, bai:11, hanzi:"学", pinyin:"xué", loai:"đgt.", nghia:"học"},
+  {id:225, bai:11, hanzi:"医", pinyin:"yī", loai:"dt.", nghia:"y, y học, y khoa"},
+  {id:226, bai:11, hanzi:"弟弟", pinyin:"dìdi", loai:"dt.", nghia:"em trai"},
+  {id:227, bai:11, hanzi:"起床", pinyin:"qǐchuáng", loai:"đgt.", nghia:"thức dậy, ngủ dậy, dậy"},
+  {id:228, bai:11, hanzi:"睡觉", pinyin:"shuìjiào", loai:"đgt.", nghia:"ngủ"},
+  {id:229, bai:11, hanzi:"睡", pinyin:"shuì", loai:"đgt.", nghia:"ngủ"},
+  {id:230, bai:11, hanzi:"那里", pinyin:"nàlǐ", loai:"đt.", nghia:"ở kia, chỗ đó"},
+  {id:231, bai:11, hanzi:"哪里", pinyin:"nǎlǐ", loai:"đt.", nghia:"đâu, chỗ nào, nơi nào"},
+  {id:232, bai:11, hanzi:"昨天", pinyin:"zuótiān", loai:"dt.", nghia:"hôm qua"},
+  {id:233, bai:11, hanzi:"问", pinyin:"wèn", loai:"đgt.", nghia:"hỏi"},
+  {id:234, bai:11, hanzi:"对", pinyin:"duì", loai:"giới.", nghia:"với, đối với"},
+  {id:235, bai:11, hanzi:"说", pinyin:"shuō", loai:"đgt.", nghia:"nói"},
+  {id:236, bai:11, hanzi:"要", pinyin:"yào", loai:"đtnn.", nghia:"cần, muốn, phải"},
+  {id:237, bai:11, hanzi:"小朋友", pinyin:"xiǎopéngyou", loai:"dt.", nghia:"bạn nhỏ"},
+  {id:238, bai:12, hanzi:"天气", pinyin:"tiānqì", loai:"dt.", nghia:"thời tiết"},
+  {id:239, bai:12, hanzi:"这里", pinyin:"zhèlǐ", loai:"đt.", nghia:"ở đây, chỗ này"},
+  {id:240, bai:12, hanzi:"天", pinyin:"tiān", loai:"dt.", nghia:"thời tiết, trời"},
+  {id:241, bai:12, hanzi:"下雨", pinyin:"xiàyǔ", loai:"đgt.", nghia:"mưa, mưa rơi"},
+  {id:242, bai:12, hanzi:"了", pinyin:"le", loai:"trợ.", nghia:"dùng cuối câu chỉ sự thay đổi tình hình hoặc trạng thái"},
+  {id:243, bai:12, hanzi:"雨", pinyin:"yǔ", loai:"dt.", nghia:"mưa"},
+  {id:244, bai:12, hanzi:"有点儿", pinyin:"yǒudiǎnr", loai:"phó.", nghia:"hơi, hơi... một chút"},
+  {id:245, bai:12, hanzi:"觉得", pinyin:"juéde", loai:"đgt.", nghia:"cảm thấy"},
+  {id:246, bai:12, hanzi:"冷", pinyin:"lěng", loai:"tt.", nghia:"lạnh"},
+  {id:247, bai:12, hanzi:"下", pinyin:"xià", loai:"đgt.", nghia:"(mưa, tuyết...) rơi"},
+  {id:248, bai:12, hanzi:"雪", pinyin:"xuě", loai:"dt.", nghia:"tuyết"},
+  {id:249, bai:12, hanzi:"来", pinyin:"lái", loai:"đgt.", nghia:"đến"},
+  {id:250, bai:12, hanzi:"公司", pinyin:"gōngsī", loai:"dt.", nghia:"công ty"},
+  {id:251, bai:12, hanzi:"生病", pinyin:"shēngbìng", loai:"đgt.", nghia:"ốm, bị ốm, bệnh, bị bệnh"},
+  {id:252, bai:12, hanzi:"看病", pinyin:"kànbìng", loai:"đgt.", nghia:"khám bệnh"},
+  {id:253, bai:12, hanzi:"病", pinyin:"bìng", loai:"đgt.", nghia:"ốm, bị ốm, bệnh, bị bệnh"},
+  {id:254, bai:12, hanzi:"一点儿", pinyin:"yìdiǎnr", loai:"s.lượng", nghia:"một chút, một ít"},
+  {id:255, bai:12, hanzi:"药", pinyin:"yào", loai:"dt.", nghia:"thuốc"},
+  {id:256, bai:12, hanzi:"天", pinyin:"tiān", loai:"lượng.", nghia:"ngày (đơn vị đếm số ngày)"},
+  {id:257, bai:12, hanzi:"回", pinyin:"huí", loai:"đgt.", nghia:"về, quay về"},
+  {id:258, bai:12, hanzi:"再", pinyin:"zài", loai:"phó.", nghia:"sau đó, mới (chỉ trình tự)"},
+  {id:259, bai:12, hanzi:"喝", pinyin:"hē", loai:"đgt.", nghia:"uống"},
+  {id:260, bai:12, hanzi:"热", pinyin:"rè", loai:"tt.", nghia:"nóng, ấm"},
+  {id:261, bai:12, hanzi:"水", pinyin:"shuǐ", loai:"dt.", nghia:"nước"},
+  {id:262, bai:13, hanzi:"可以", pinyin:"kěyǐ", loai:"đtnn.", nghia:"có thể, được (cho phép làm gì)"},
+  {id:263, bai:13, hanzi:"再", pinyin:"zài", loai:"phó.", nghia:"lại, thêm lần nữa"},
+  {id:264, bai:13, hanzi:"问题", pinyin:"wèntí", loai:"dt.", nghia:"câu hỏi, vấn đề"},
+  {id:265, bai:13, hanzi:"卖", pinyin:"mài", loai:"đgt.", nghia:"bán"},
+  {id:266, bai:13, hanzi:"打电话", pinyin:"dǎ diànhuà", loai:"cụm từ", nghia:"gọi điện thoại"},
+  {id:267, bai:13, hanzi:"一下", pinyin:"yíxià", loai:"s.lượng", nghia:"một chút, thử (sau động từ, hành động nhanh/thử làm)"},
+  {id:268, bai:13, hanzi:"服务员", pinyin:"fúwùyuán", loai:"dt.", nghia:"nhân viên phục vụ, người phục vụ"},
+  {id:269, bai:13, hanzi:"女士", pinyin:"nǚshì", loai:"dt.", nghia:"bà, cô, quý bà, quý cô"},
+  {id:270, bai:13, hanzi:"请", pinyin:"qǐng", loai:"đgt.", nghia:"mời, xin, hãy"},
+  {id:271, bai:13, hanzi:"坐", pinyin:"zuò", loai:"đgt.", nghia:"ngồi"},
+  {id:272, bai:13, hanzi:"给", pinyin:"gěi", loai:"đgt.", nghia:"đưa cho, cho"},
+  {id:273, bai:13, hanzi:"杯", pinyin:"bēi", loai:"dt.", nghia:"ly, cốc, tách"},
+  {id:274, bai:13, hanzi:"要", pinyin:"yào", loai:"đgt.", nghia:"cần, muốn"},
+  {id:275, bai:13, hanzi:"早饭", pinyin:"zǎofàn", loai:"dt.", nghia:"bữa sáng"},
+  {id:276, bai:13, hanzi:"这个", pinyin:"zhège", loai:"đt.", nghia:"cái này"},
+  {id:277, bai:13, hanzi:"面包", pinyin:"miànbāo", loai:"dt.", nghia:"bánh mì"},
+  {id:278, bai:13, hanzi:"鸡蛋", pinyin:"jīdàn", loai:"dt.", nghia:"trứng gà"},
+  {id:279, bai:13, hanzi:"先生", pinyin:"xiānsheng", loai:"dt.", nghia:"anh, ông, ngài, quý ông"},
+  {id:280, bai:13, hanzi:"一半", pinyin:"yíbàn", loai:"số.", nghia:"một nửa"},
+  {id:281, bai:13, hanzi:"茶", pinyin:"chá", loai:"dt.", nghia:"trà, chè"},
+  {id:282, bai:14, hanzi:"上", pinyin:"shàng", loai:"đgt.", nghia:"lên (xe, tàu...)"},
+  {id:283, bai:14, hanzi:"火车", pinyin:"huǒchē", loai:"dt.", nghia:"tàu, tàu hoả, xe lửa"},
+  {id:284, bai:14, hanzi:"中午", pinyin:"zhōngwǔ", loai:"dt.", nghia:"buổi trưa"},
+  {id:285, bai:14, hanzi:"开", pinyin:"kāi", loai:"đgt.", nghia:"lái, chạy, khởi hành (phương tiện giao thông)"},
+  {id:286, bai:14, hanzi:"有些", pinyin:"yǒuxiē", loai:"đt.", nghia:"có một số, có một vài"},
+  {id:287, bai:14, hanzi:"有的", pinyin:"yǒude", loai:"đt.", nghia:"có người, có cái"},
+  {id:288, bai:14, hanzi:"了", pinyin:"le", loai:"trợ.", nghia:"dùng sau động từ chỉ sự hoàn thành của động tác"},
+  {id:289, bai:14, hanzi:"写", pinyin:"xiě", loai:"đgt.", nghia:"viết"},
+  {id:290, bai:14, hanzi:"都", pinyin:"dōu", loai:"phó.", nghia:"đều"},
+  {id:291, bai:14, hanzi:"听见", pinyin:"tīngjiàn", loai:"đgt.", nghia:"nghe thấy"},
+  {id:292, bai:14, hanzi:"不要", pinyin:"búyào", loai:"phó.", nghia:"đừng, không được"},
+  {id:293, bai:14, hanzi:"说话", pinyin:"shuōhuà", loai:"đgt.", nghia:"nói chuyện"},
+  {id:294, bai:14, hanzi:"听", pinyin:"tīng", loai:"đgt.", nghia:"nghe"},
+  {id:295, bai:14, hanzi:"哪些", pinyin:"nǎxiē", loai:"đt.", nghia:"những... nào"},
+  {id:296, bai:14, hanzi:"字", pinyin:"zì", loai:"dt.", nghia:"chữ"},
+  {id:297, bai:14, hanzi:"汉语", pinyin:"Hànyǔ", loai:"d.từ riêng", nghia:"tiếng Trung Quốc, tiếng Hán"},
+  {id:298, bai:14, hanzi:"汉字", pinyin:"Hànzì", loai:"d.từ riêng", nghia:"chữ Hán"},
+  {id:299, bai:14, hanzi:"明年", pinyin:"míngnián", loai:"dt.", nghia:"sang năm, năm tới"},
+  {id:300, bai:14, hanzi:"上", pinyin:"shàng", loai:"đgt.", nghia:"lên, bắt đầu (làm gì vào thời gian cố định)"},
+  {id:301, bai:14, hanzi:"中学", pinyin:"zhōngxué", loai:"dt.", nghia:"trường trung học, trung học"},
+  {id:302, bai:14, hanzi:"小学", pinyin:"xiǎoxué", loai:"dt.", nghia:"trường tiểu học, tiểu học"},
+  {id:303, bai:14, hanzi:"中学生", pinyin:"zhōngxuéshēng", loai:"dt.", nghia:"học sinh trung học, học sinh cấp hai"},
+  {id:304, bai:14, hanzi:"小学生", pinyin:"xiǎoxuéshēng", loai:"dt.", nghia:"học sinh tiểu học, học sinh cấp một"},
+  {id:305, bai:14, hanzi:"上学", pinyin:"shàngxué", loai:"đgt.", nghia:"đi học, bắt đầu đi học"},
+  {id:306, bai:14, hanzi:"他们", pinyin:"tāmen", loai:"đt.", nghia:"họ, chúng, bọn họ (nam hoặc chung)"},
+  {id:307, bai:14, hanzi:"她们", pinyin:"tāmen", loai:"đt.", nghia:"họ, chúng, bọn họ (nữ)"},
+  {id:308, bai:14, hanzi:"它们", pinyin:"tāmen", loai:"đt.", nghia:"chúng (đại từ ngôi 3 số nhiều, chỉ vật)"},
+  {id:309, bai:14, hanzi:"晚", pinyin:"wǎn", loai:"tt.", nghia:"muộn, trễ"},
+  {id:310, bai:15, hanzi:"爱", pinyin:"ài", loai:"đgt.", nghia:"thích, yêu thích"},
+  {id:311, bai:15, hanzi:"哪个", pinyin:"nǎge", loai:"đt.", nghia:"cái nào, nào"},
+  {id:312, bai:15, hanzi:"去年", pinyin:"qùnián", loai:"dt.", nghia:"năm ngoái"},
+  {id:313, bai:15, hanzi:"男朋友", pinyin:"nánpéngyou", loai:"dt.", nghia:"bạn trai, người yêu"},
+  {id:314, bai:15, hanzi:"几", pinyin:"jǐ", loai:"số.", nghia:"vài, mấy"},
+  {id:315, bai:15, hanzi:"年", pinyin:"nián", loai:"dt.", nghia:"năm"},
+  {id:316, bai:15, hanzi:"好玩儿", pinyin:"hǎowánr", loai:"tt.", nghia:"vui, thích, thú vị"},
+  {id:317, bai:15, hanzi:"飞机", pinyin:"fēijī", loai:"dt.", nghia:"máy bay"},
+  {id:318, bai:15, hanzi:"要", pinyin:"yào", loai:"đgt.", nghia:"cần, mất (thời gian)"},
+  {id:319, bai:15, hanzi:"小时", pinyin:"xiǎoshí", loai:"dt.", nghia:"tiếng đồng hồ, giờ"},
+  {id:320, bai:15, hanzi:"家人", pinyin:"jiārén", loai:"dt.", nghia:"người nhà"},
+  {id:321, bai:15, hanzi:"时间", pinyin:"shíjiān", loai:"dt.", nghia:"thời gian"},
+  {id:322, bai:15, hanzi:"机场", pinyin:"jīchǎng", loai:"dt.", nghia:"sân bay"},
+  {id:323, bai:15, hanzi:"接", pinyin:"jiē", loai:"đgt.", nghia:"đón, tiếp đón"},
+  {id:324, bai:15, hanzi:"住", pinyin:"zhù", loai:"đgt.", nghia:"ở"},
+  {id:325, bai:15, hanzi:"早", pinyin:"zǎo", loai:"tt.", nghia:"sớm"},
+  {id:326, bai:15, hanzi:"那", pinyin:"nà", loai:"liên.", nghia:"vậy thì, thế thì"},
+  {id:327, bai:15, hanzi:"西安", pinyin:"Xī'ān", loai:"d.từ riêng", nghia:"Tây An"},
+  {id:328, bai:15, hanzi:"北京", pinyin:"Běijīng", loai:"d.từ riêng", nghia:"Bắc Kinh"},
+  {id:329, bai:15, hanzi:"大兴机场", pinyin:"Dàxīng Jīchǎng", loai:"d.từ riêng", nghia:"sân bay Đại Hưng"},
 ];
 
-/* ===================== DATA: GRAMMAR (Bài 1–5) ===================== */
+
+
+
+/* ===================== DATA: GRAMMAR (Bài 1–15, toàn bộ New HSK 1) ===================== */
 const GRAMMAR = [
   {id:1, bai:2, title:"Trật tự từ cơ bản", cn:"汉语的基本语序",
     desc:"Trật tự từ cơ bản của câu tiếng Trung là: Chủ ngữ + Vị ngữ + Tân ngữ (giống thứ tự trong tiếng Việt).",
@@ -576,7 +811,178 @@ const GRAMMAR = [
       {cn:"你会做饭吗？", vi:"Bạn có biết nấu ăn không?"},
       {cn:"我不会做菜。", vi:"Tôi không biết nấu món ăn."}
     ]},
+  {id:12, bai:6, title:"Động từ năng nguyện \"想\"", cn:"能愿动词“想”",
+    desc:"“想” đặt trước động từ, biểu thị mong muốn hoặc dự định làm việc gì đó.",
+    examples:[
+      {cn:"我想去超市。", vi:"Tôi muốn đi siêu thị."},
+      {cn:"我哥哥不想休息。", vi:"Anh trai tôi không muốn nghỉ."}
+    ]},
+  {id:13, bai:6, title:"Câu liên động (1)", cn:"连动句 (1)",
+    desc:"Câu liên động có vị ngữ gồm hai (hoặc nhiều) cụm động từ nối tiếp nhau, thường biểu thị mục đích hoặc phương thức của hành động.",
+    examples:[
+      {cn:"我想去超市买东西。", vi:"Tôi muốn đi siêu thị mua đồ. (mục đích)"},
+      {cn:"我们坐出租车去西安饭店。", vi:"Chúng tôi đi taxi đến nhà hàng Tây An. (phương thức)"}
+    ]},
+  {id:14, bai:6, title:"Đại từ nghi vấn \"怎么\"", cn:"疑问代词“怎么”",
+    desc:"“怎么” đặt trước động từ để hỏi về phương thức thực hiện hành động (đi bằng cách nào, làm thế nào).",
+    examples:[
+      {cn:"我们怎么去？", vi:"Chúng ta đi bằng cách nào?"},
+      {cn:"她怎么去超市？", vi:"Cô ấy đi siêu thị bằng cách nào?"}
+    ]},
+  {id:15, bai:7, title:"Cách diễn đạt thời gian (2)", cn:"时间的表达 (2)",
+    desc:"Dùng “点” và “分” để nói giờ cụ thể — giờ chẵn dùng “点”, phút lẻ dùng “分” (khi phút là “十分” không được lược bỏ “分”; dưới 10 phút phải đọc thêm “零”). Ngoài ra dùng “上午/中午/下午/晚上” để chỉ khoảng thời gian trong ngày, có thể thêm giờ cụ thể phía sau.",
+    examples:[
+      {cn:"二十一点十分", vi:"21 giờ 10 phút (21:10)"},
+      {cn:"下午两点半", vi:"2 giờ rưỡi chiều"}
+    ]},
+  {id:16, bai:7, title:"Trợ từ ngữ khí \"吧\" (1)", cn:"语气助词“吧” (1)",
+    desc:"“吧” đọc nhẹ (ba), đặt cuối câu, biểu thị đề nghị, thương lượng, khuyên nhủ hoặc yêu cầu.",
+    examples:[
+      {cn:"我们下午三点见吧。", vi:"Chúng ta gặp nhau lúc 3 giờ chiều nhé."},
+      {cn:"我们去西安饭店吃晚饭吧。", vi:"Chúng ta đi nhà hàng Tây An ăn tối nhé."}
+    ]},
+  {id:17, bai:7, title:"Vị trí của phó từ, từ chỉ thời gian khi làm trạng ngữ", cn:"副词、时间词语作状语的位置",
+    desc:"Trong tiếng Trung, phó từ và từ ngữ chỉ thời gian khi làm trạng ngữ thường được đặt trước động từ hoặc tính từ.",
+    examples:[
+      {cn:"我不想去。", vi:"Tôi không muốn đi."},
+      {cn:"她上午十点半上课。", vi:"Cô ấy học lúc 10 giờ rưỡi sáng."}
+    ]},
+  {id:18, bai:7, title:"Trợ từ ngữ khí \"呢\" (2)", cn:"语气助词“呢” (2)",
+    desc:"“呢” đặt cuối câu, dùng để xác nhận hoặc nhấn mạnh một sự việc đang diễn ra.",
+    examples:[
+      {cn:"我明天下午两点还上课呢。", vi:"Ngày mai 2 giờ chiều tôi vẫn còn phải học đấy."},
+      {cn:"李文晚上还有事呢。", vi:"Buổi tối Lý Văn vẫn còn việc đấy."}
+    ]},
+  {id:19, bai:8, title:"Phương vị từ", cn:"方位词",
+    desc:"Các phương vị từ thường gặp: 上 (trên), 下 (dưới), 里 (trong), 外 (ngoài), 前 (trước), 后 (sau), 外边 (bên ngoài) — dùng để diễn đạt phương hướng, vị trí, thường đặt sau danh từ.",
+    examples:[
+      {cn:"房间里有一只小猫。", vi:"Trong phòng có một con mèo nhỏ."},
+      {cn:"小雪的手机在桌子上呢。", vi:"Điện thoại của Tiểu Tuyết đang ở trên bàn."}
+    ]},
+  {id:20, bai:8, title:"Giới từ \"在\"", cn:"介词“在”",
+    desc:"Giới từ “在” kết hợp với từ ngữ chỉ vị trí/nơi chốn, đứng trước động từ, biểu thị hành động diễn ra ở đâu.",
+    examples:[
+      {cn:"我在学校吃午饭。", vi:"Tôi ăn trưa ở trường."},
+      {cn:"他爸爸在医院工作。", vi:"Bố anh ấy làm việc ở bệnh viện."}
+    ]},
+  {id:21, bai:8, title:"Động từ năng nguyện \"能\"", cn:"能愿动词“能”",
+    desc:"“能” đặt trước động từ, biểu thị có năng lực, có điều kiện hoặc khả năng làm việc gì đó.",
+    examples:[
+      {cn:"下午两点你能到吗？", vi:"2 giờ chiều bạn đến được không?"},
+      {cn:"我不能去学校吃午饭。", vi:"Tôi không thể đến trường ăn trưa."}
+    ]},
+  {id:22, bai:9, title:"Câu tồn hiện (1)", cn:"存现句 (1)",
+    desc:"Câu tồn hiện biểu thị sự tồn tại của người/vật ở một nơi hoặc vị trí nào đó, thường dùng “有” hoặc “是”. Khi phủ định, không thêm số lượng từ trước tân ngữ.",
+    examples:[
+      {cn:"学校前边有一家电影院。", vi:"Phía trước trường có một rạp chiếu phim."},
+      {cn:"桌子上没有小猫。", vi:"Trên bàn không có con mèo nào."}
+    ]},
+  {id:23, bai:9, title:"Trật tự từ chỉ thời gian và nơi chốn khi cùng làm trạng ngữ", cn:"时间词语和处所词语同时作状语的顺序",
+    desc:"Khi từ ngữ chỉ thời gian và từ ngữ chỉ nơi chốn cùng làm trạng ngữ trong câu, từ chỉ thời gian phải đứng trước từ chỉ nơi chốn.",
+    examples:[
+      {cn:"我们七点在电影院外边见。", vi:"7 giờ chúng ta gặp nhau ở bên ngoài rạp chiếu phim."},
+      {cn:"陈天中明天中午在学校吃午饭。", vi:"Trưa mai Trần Thiên Trung ăn trưa ở trường."}
+    ]},
+  {id:24, bai:9, title:"Cách biểu thị số thứ tự \"第\"", cn:"表示序数的“第”",
+    desc:"“第” đặt trước số từ để biểu thị số thứ tự. Cấu trúc cơ bản: (1) 第 + số từ; (2) 第 + số từ + lượng từ + (danh từ).",
+    examples:[
+      {cn:"第一，第二，第三", vi:"thứ nhất, thứ hai, thứ ba"},
+      {cn:"第一个学生，第一本书", vi:"học sinh thứ nhất, quyển sách thứ nhất"}
+    ]},
+  {id:25, bai:10, title:"Câu vị ngữ tính từ", cn:"形容词谓语句",
+    desc:"Tính từ có thể trực tiếp làm vị ngữ của câu (không cần “是”); trước tính từ có thể thêm phó từ chỉ mức độ hoặc phó từ phủ định.",
+    examples:[
+      {cn:"这儿的水果真不少！", vi:"Hoa quả ở đây thật nhiều!"},
+      {cn:"我的房间不大。", vi:"Phòng của tôi không lớn."}
+    ]},
+  {id:26, bai:10, title:"Đại từ nghi vấn \"怎么样\"", cn:"疑问代词“怎么样”",
+    desc:"“怎么样” dùng để hỏi ý kiến hoặc hỏi thăm tình hình, thường đặt cuối câu.",
+    examples:[
+      {cn:"这个杯子怎么样？", vi:"Cái cốc này thế nào?"},
+      {cn:"这个菜怎么样？", vi:"Món ăn này thế nào?"}
+    ]},
+  {id:27, bai:11, title:"Câu hỏi chính phản", cn:"正反问",
+    desc:"Cấu trúc câu hỏi chính phản là “×+不/没+×”, trong đó “×” là động từ hoặc tính từ. Dùng “不/没” cho câu hỏi chính phản động từ, dùng “不” cho câu hỏi chính phản tính từ.",
+    examples:[
+      {cn:"它是不是在超市后边？", vi:"Nó có phải ở phía sau siêu thị không?"},
+      {cn:"这件衣服好看不好看？", vi:"Chiếc áo này đẹp không?"}
+    ]},
+  {id:28, bai:11, title:"Phó từ chỉ thời gian \"在/正在\"", cn:"时间副词“在/正在”",
+    desc:"“在/正在” đứng trước động từ để biểu thị hành động đang diễn ra hoặc tình huống đang tiếp diễn. Có 3 hình thức: (1) 在/正在 + động từ; (2) 在/正在 + động từ + 呢; (3) động từ + 呢. Khi trả lời phủ định, dùng phó từ “没(有)”.",
+    examples:[
+      {cn:"你还在读大学吗？", vi:"Bạn vẫn đang học đại học à?"},
+      {cn:"学生们在/正在上课呢。", vi:"Các học sinh đang học đấy."}
+    ]},
+  {id:29, bai:11, title:"Động từ năng nguyện \"要\"", cn:"能愿动词“要”",
+    desc:"“要” đặt trước động từ, biểu thị mong muốn hoặc dự định làm việc gì đó.",
+    examples:[
+      {cn:"他今天要和小朋友玩。", vi:"Hôm nay cậu ấy định chơi với các bạn nhỏ."},
+      {cn:"妈妈要去超市。", vi:"Mẹ định đi siêu thị."}
+    ]},
+  {id:30, bai:12, title:"Câu phi chủ vị", cn:"非主谓句",
+    desc:"Câu phi chủ vị là câu được cấu tạo bởi từ hoặc cụm từ, không phân biệt rõ chủ ngữ và vị ngữ, thường dùng trong văn nói.",
+    examples:[
+      {cn:"下雨了。", vi:"Trời mưa rồi."},
+      {cn:"下雪了。", vi:"Trời tuyết rồi."}
+    ]},
+  {id:31, bai:12, title:"Trợ từ ngữ khí \"了\" (1)", cn:"语气助词“了” (1)",
+    desc:"“了(1)” đặt ở cuối câu hoặc chỗ ngắt quãng trong câu, biểu thị có sự thay đổi hoặc xuất hiện tình huống mới. Khi trả lời phủ định, dùng phó từ “没” và lược bỏ “了” ở cuối câu.",
+    examples:[
+      {cn:"下雨了。", vi:"Trời mưa rồi."},
+      {cn:"十二点了，吃午饭吧。", vi:"12 giờ rồi, ăn trưa thôi."}
+    ]},
+  {id:32, bai:12, title:"Cấu trúc \"太……了\"", cn:"“太……了！”格式",
+    desc:"Cấu trúc “太……了！” dùng để diễn đạt cảm thán về mức độ rất cao hoặc rất sâu sắc.",
+    examples:[
+      {cn:"太冷了！", vi:"Lạnh quá!"},
+      {cn:"这个杯子太小了。", vi:"Cái cốc này nhỏ quá."}
+    ]},
+  {id:33, bai:13, title:"Động từ năng nguyện \"可以\"", cn:"能愿动词“可以”",
+    desc:"“可以” đặt trước động từ, biểu thị khả năng, năng lực hoặc sự cho phép.",
+    examples:[
+      {cn:"我可以再问您一个问题吗？", vi:"Tôi có thể hỏi thêm bạn một câu được không?"},
+      {cn:"你们可以看这本书。", vi:"Các bạn có thể xem quyển sách này."}
+    ]},
+  {id:34, bai:13, title:"Cấu trúc \"động từ + 一下\"", cn:"“动词+一下”结构",
+    desc:"Cấu trúc “động từ + 一下” dùng để biểu thị thực hiện hành động một lần hoặc thử làm việc gì đó, hành động diễn ra trong thời gian ngắn.",
+    examples:[
+      {cn:"你可以打电话问一下。", vi:"Bạn có thể gọi điện hỏi thử xem."},
+      {cn:"请休息一下。", vi:"Mời nghỉ một chút."}
+    ]},
+  {id:35, bai:13, title:"Câu có hai tân ngữ (1)", cn:"双宾语句 (1)",
+    desc:"Câu có hai tân ngữ là câu mà một động từ mang hai tân ngữ. Trong sách này học câu hai tân ngữ được tạo bởi động từ “给” và “问”.",
+    examples:[
+      {cn:"请给我一杯牛奶。", vi:"Cho tôi một cốc sữa."},
+      {cn:"我问老师两个问题。", vi:"Tôi hỏi thầy giáo hai câu hỏi."}
+    ]},
+  {id:36, bai:14, title:"Trợ từ động thái \"了\" (2)", cn:"动态助词“了” (2)",
+    desc:"“了(2)” đứng sau động từ để biểu thị hành động đã xảy ra hoặc đã hoàn thành. Khi phủ định dùng “没”, bỏ “了”.",
+    examples:[
+      {cn:"我看了一个电影。", vi:"Tôi đã xem một bộ phim."},
+      {cn:"我昨天没去商店买东西。", vi:"Hôm qua tôi không đi cửa hàng mua đồ."}
+    ]},
+  {id:37, bai:14, title:"Từ li hợp (1)", cn:"离合词 (1)",
+    desc:"Các từ như “上课, 下课, 上班, 下班, 说话, 读书, 睡觉, 看病, 生病”... là cấu trúc động từ đặc biệt, có thể tách ra hoặc hợp lại. Khi hợp lại là từ, khi tách ra có thể chèn thêm thành phần khác vào giữa (ví dụ 了, số lượng từ...).",
+    examples:[
+      {cn:"睡觉 → 睡了觉 / 睡了一觉", vi:"ngủ → đã ngủ / đã ngủ một giấc"},
+      {cn:"上课 → 上了课 / 上中文课", vi:"lên lớp → đã học / học tiết tiếng Trung"}
+    ]},
+  {id:38, bai:14, title:"Phó từ chỉ phạm vi \"都\"", cn:"范围副词“都”",
+    desc:"Phó từ chỉ phạm vi “都” dùng để biểu thị toàn bộ, tất cả. Đối tượng được bao quát đứng trước “都”. Khi phủ định, từ phủ định đứng sau “都”.",
+    examples:[
+      {cn:"我们都会写了。", vi:"Chúng tôi đều biết viết rồi."},
+      {cn:"同学们都没听见。", vi:"Các bạn học sinh đều không nghe thấy."}
+    ]},
+  {id:39, bai:15, title:"Câu ghép đẳng lập \"……, 还/也……\"", cn:"并列复句“……，还/也……”",
+    desc:"Câu ghép đẳng lập được tạo bởi hai hay nhiều vế câu có liên quan về mặt logic và đối xứng với nhau về mặt cấu trúc.",
+    examples:[
+      {cn:"我喜欢这个，也喜欢那个。", vi:"Tôi thích cái này, cũng thích cái kia."},
+      {cn:"我喜欢喝中国茶，还喜欢吃中国菜。", vi:"Tôi thích uống trà Trung Quốc, còn thích ăn món Trung Quốc."}
+    ]},
 ];
+
+
+
 
 /* ===================== HELPERS ===================== */
 /* Bỏ dấu tiếng Việt và thanh điệu pinyin để tìm kiếm không cần gõ dấu */
@@ -601,6 +1007,23 @@ function shuffle(arr){
     [a[i],a[j]]=[a[j],a[i]];
   }
   return a;
+}
+
+/* Draw queue: no repeats until the whole set has been drawn once */
+function makeDrawer(allIds){
+  let pool = [];
+  return function draw(n){
+    let usedReset = false;
+    const drawn = [];
+    while(drawn.length < n){
+      if(pool.length === 0){
+        pool = shuffle(allIds);
+        if(drawn.length > 0 || arguments.callee) usedReset = true;
+      }
+      drawn.push(pool.shift());
+    }
+    return {drawn, usedReset};
+  };
 }
 
 const vocabIds = WORDS.map(w=>w.id);
@@ -665,7 +1088,7 @@ let vocabActiveBai = 'all';
 let vocabSearchTerm = '';
 
 const vocabChipRow = document.getElementById('vocabChipRow');
-const vocabBaiOptions = ['all',1,2,3,4,5];
+const vocabBaiOptions = ['all',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 vocabBaiOptions.forEach(b=>{
   const chip = document.createElement('button');
   chip.type='button';
@@ -746,7 +1169,7 @@ let grammarActiveBai = 'all';
 let grammarSearchTerm = '';
 
 const grammarChipRow = document.getElementById('grammarChipRow');
-const grammarBaiOptions = ['all',1,2,3,4,5];
+const grammarBaiOptions = ['all',1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
 grammarBaiOptions.forEach(b=>{
   const chip = document.createElement('button');
   chip.type='button';
