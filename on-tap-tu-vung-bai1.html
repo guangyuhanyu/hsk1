@@ -545,12 +545,13 @@ document.getElementById('studentName').addEventListener('keydown', (e)=>{
 
 /* ===================== RENDER: MCQ ===================== */
 const mcqList = document.getElementById('mcq-list');
-WORDS.forEach(w=>{
+shuffle(WORDS).forEach(w=>{
   const distractors = shuffle(WORDS.filter(x=>x.id!==w.id)).slice(0,3).map(x=>x.nghia);
   const options = shuffle([w.nghia, ...distractors]);
 
   const q = document.createElement('div');
   q.className='q';
+  q.dataset.id = w.id;
   q.innerHTML = `
     <div class="q-prompt">Từ <b class="q-hanzi-line">${w.hanzi}</b> (${w.pinyin}) có nghĩa là gì?</div>
     <div class="opts"></div>
@@ -574,7 +575,7 @@ WORDS.forEach(w=>{
 
 /* ===================== RENDER: FILL IN ===================== */
 const fillList = document.getElementById('fill-list');
-WORDS.forEach(w=>{
+shuffle(WORDS).forEach(w=>{
   const row = document.createElement('div');
   row.className='fill-row';
   row.innerHTML = `
@@ -693,9 +694,8 @@ document.getElementById('submitBtn').addEventListener('click', ()=>{
   let mcqScore = 0, fillScore = 0, matchScore = 0;
 
   // Grade MCQ
-  const mcqQs = mcqList.querySelectorAll('.q');
-  WORDS.forEach((w, idx)=>{
-    const qEl = mcqQs[idx];
+  WORDS.forEach(w=>{
+    const qEl = mcqList.querySelector(`.q[data-id="${w.id}"]`);
     const selectedBtn = [...qEl.querySelectorAll('.opt')].find(b=>b.classList.contains('selected'));
     const isCorrect = selectedBtn && selectedBtn.textContent === w.nghia;
     if(isCorrect){ mcqScore++; } else { wrongWords.add(w.id); }

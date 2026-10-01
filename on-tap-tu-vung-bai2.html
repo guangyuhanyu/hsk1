@@ -521,13 +521,13 @@ const DIALOGUES = [
   {
     id:1, icon:"💥",
     context:"Bạn vô tình va phải một người bạn trong hành lang.",
-    lines:[ {sp:"Bạn", text:"___！"}, {sp:"Bạn ấy", text:"没关系！"} ],
+    lines:[ {sp:"A", text:"___！"}, {sp:"B", text:"没关系！"} ],
     options:["对不起","谢谢","请问","再见"], correct:"对不起", relatedIds:[9]
   },
   {
     id:2, icon:"🙆",
     context:"Người bạn vừa giẫm vào chân bạn và nói lời xin lỗi.",
-    lines:[ {sp:"Bạn ấy", text:"对不起！"}, {sp:"Bạn", text:"___"} ],
+    lines:[ {sp:"A", text:"对不起！"}, {sp:"B", text:"___"} ],
     options:["没关系","谢谢","你好","再见"], correct:"没关系", relatedIds:[10]
   },
   {
@@ -545,7 +545,7 @@ const DIALOGUES = [
   {
     id:5, icon:"🙋",
     context:"Bạn muốn hỏi lịch sự tên của một người bạn mới quen.",
-    lines:[ {sp:"Bạn", text:"___，你叫什么名字？"}, {sp:"Bạn ấy", text:"我叫李文。"} ],
+    lines:[ {sp:"A", text:"___，你叫什么名字？"}, {sp:"B", text:"我叫李文。"} ],
     options:["请问","对不起","没关系","也"], correct:"请问", relatedIds:[1]
   },
   {
@@ -670,7 +670,7 @@ DIALOGUES.forEach(d=>{
     <div class="opts"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  d.options.forEach(opt=>{
+  shuffle(d.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.textContent = opt;
@@ -691,8 +691,9 @@ const sentenceList = document.getElementById('sentence-list');
 SENTENCES.forEach((s, idx)=>{
   let shuffledTokens = shuffle(s.tokens);
   // avoid accidentally shuffling into the exact correct order
-  if(shuffledTokens.join('') === s.tokens.join('')){
-    shuffledTokens = shuffle(s.tokens);
+  let tries = 0;
+  while(shuffledTokens.join('') === s.tokens.join('') && tries < 20){
+    shuffledTokens = shuffle(s.tokens); tries++;
   }
 
   const card = document.createElement('div');
