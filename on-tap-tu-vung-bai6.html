@@ -824,7 +824,7 @@ TRANSLATE.forEach((t, idx)=>{
     <div class="opts" style="grid-template-columns:1fr; margin-top:12px;"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  t.options.forEach(opt=>{
+  shuffle(t.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.style.textAlign = 'left';
@@ -852,7 +852,7 @@ PASSAGE.blanks.forEach(b=>{
   item.className='passage-blank-item';
   item.innerHTML = `<div class="q-prompt">Chỗ trống <b>【${b.n}】</b></div><div class="opts"></div>`;
   const optsWrap = item.querySelector('.opts');
-  b.options.forEach(opt=>{
+  shuffle(b.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.textContent = opt;
@@ -881,7 +881,7 @@ PASSAGE_QUESTIONS.forEach((q, idx)=>{
     <div class="opts" style="grid-template-columns:1fr;"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  q.options.forEach(opt=>{
+  shuffle(q.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt';
     btn.style.textAlign='left';

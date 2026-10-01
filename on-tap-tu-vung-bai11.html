@@ -861,8 +861,9 @@ MAKESENTENCE.forEach((m, idx)=>{
 const sentenceList = document.getElementById('sentence-list');
 SENTENCES.forEach((s, idx)=>{
   let shuffledTokens = shuffle(s.tokens);
-  if(shuffledTokens.join('') === s.tokens.join('')){
-    shuffledTokens = shuffle(s.tokens);
+  let tries = 0;
+  while(shuffledTokens.join('') === s.tokens.join('') && tries < 20){
+    shuffledTokens = shuffle(s.tokens); tries++;
   }
 
   const card = document.createElement('div');
@@ -931,7 +932,7 @@ PASSAGE_QUESTIONS.forEach(q=>{
     <div class="opts"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  q.options.forEach(opt=>{
+  shuffle(q.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.style.textAlign='left';

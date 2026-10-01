@@ -904,7 +904,7 @@ PASSAGE_VI.questions.forEach((q, idx)=>{
     <div class="opts" style="grid-template-columns:1fr; margin-top:12px;"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  q.options.forEach(opt=>{
+  shuffle(q.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.style.textAlign = 'left';
@@ -932,7 +932,7 @@ PASSAGE_QUESTIONS.forEach(q=>{
     <div class="opts"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  q.options.forEach(opt=>{
+  shuffle(q.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.style.textAlign='left';

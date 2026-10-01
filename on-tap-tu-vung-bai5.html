@@ -742,7 +742,7 @@ CALENDARS.forEach(c=>{
     <div class="opts"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  c.options.forEach(opt=>{
+  shuffle(c.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.textContent = opt;
@@ -797,7 +797,7 @@ TRANSLATE.forEach((t, idx)=>{
     <div class="opts" style="grid-template-columns:1fr; margin-top:12px;"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  t.options.forEach(opt=>{
+  shuffle(t.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.style.textAlign = 'left';
@@ -833,7 +833,7 @@ FILLBLANKS.forEach(d=>{
     <div class="opts"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  d.options.forEach(opt=>{
+  shuffle(d.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.textContent = opt;

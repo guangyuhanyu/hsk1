@@ -850,7 +850,7 @@ CATEGORIZE.forEach(c=>{
     <div class="opts"></div>
   `;
   const optsWrap = q.querySelector('.opts');
-  c.options.forEach(opt=>{
+  shuffle(c.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt';
     btn.textContent = opt;
@@ -871,8 +871,9 @@ CATEGORIZE.forEach(c=>{
 const sentenceList = document.getElementById('sentence-list');
 SENTENCES.forEach((s, idx)=>{
   let shuffledTokens = shuffle(s.tokens);
-  if(shuffledTokens.join('') === s.tokens.join('')){
-    shuffledTokens = shuffle(s.tokens);
+  let tries = 0;
+  while(shuffledTokens.join('') === s.tokens.join('') && tries < 20){
+    shuffledTokens = shuffle(s.tokens); tries++;
   }
 
   const card = document.createElement('div');
@@ -948,7 +949,7 @@ FILLBLANKS.forEach(d=>{
     <div class="opts"></div>
   `;
   const optsWrap = card.querySelector('.opts');
-  d.options.forEach(opt=>{
+  shuffle(d.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt hanzi-opt';
     btn.textContent = opt;

@@ -852,8 +852,9 @@ MCQ.forEach(m=>{
 const sentenceList = document.getElementById('sentence-list');
 SENTENCES.forEach((s, idx)=>{
   let shuffledTokens = shuffle(s.tokens);
-  if(shuffledTokens.join('') === s.tokens.join('')){
-    shuffledTokens = shuffle(s.tokens);
+  let tries = 0;
+  while(shuffledTokens.join('') === s.tokens.join('') && tries < 20){
+    shuffledTokens = shuffle(s.tokens); tries++;
   }
 
   const card = document.createElement('div');

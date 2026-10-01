@@ -701,7 +701,7 @@ COMPREHENSION.forEach(c=>{
     <div class="opts" style="grid-template-columns:1fr;"></div>
   `;
   const optsWrap = q.querySelector('.opts');
-  c.options.forEach(opt=>{
+  shuffle(c.options).forEach(opt=>{
     const btn = document.createElement('button');
     btn.className='opt';
     btn.style.textAlign='left';
@@ -723,8 +723,9 @@ COMPREHENSION.forEach(c=>{
 const sentenceList = document.getElementById('sentence-list');
 SENTENCES.forEach((s, idx)=>{
   let shuffledTokens = shuffle(s.tokens);
-  if(shuffledTokens.join('') === s.tokens.join('')){
-    shuffledTokens = shuffle(s.tokens);
+  let tries = 0;
+  while(shuffledTokens.join('') === s.tokens.join('') && tries < 20){
+    shuffledTokens = shuffle(s.tokens); tries++;
   }
 
   const card = document.createElement('div');
